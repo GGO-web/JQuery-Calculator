@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="calculator-wrapper">
+        <div class="calculator">
+          <input class="calculator__display" value="0" name="equation" type="text" disabled>
+          <div class="calculator__panel">
+            <button aria-hidden="true" tabindex="-1" class="calculator__button button-reset" disabled></button>
+            <button aria-hidden="true" tabindex="-1" class="calculator__button button-reset" disabled></button>
+            <button id="reset" class="calculator__button button-reset">C</button>
+            <button class="calculator__button button-reset">/</button>
+            <button class="calculator__button button-reset">9</button>
+            <button class="calculator__button button-reset">8</button>
+            <button class="calculator__button button-reset">7</button>
+            <button class="calculator__button button-reset">*</button>
+            <button class="calculator__button button-reset">6</button>
+            <button class="calculator__button button-reset">5</button>
+            <button class="calculator__button button-reset">4</button>
+            <button class="calculator__button button-reset">+</button>
+            <button class="calculator__button button-reset">3</button>
+            <button class="calculator__button button-reset">2</button>
+            <button class="calculator__button button-reset">1</button>
+            <button class="calculator__button button-reset">-</button>
+            <button aria-hidden="true" tabindex="-1" class="calculator__button button-reset" disabled></button>
+            <button class="calculator__button button-reset">0</button>
+            <button aria-hidden="true" tabindex="-1" class="calculator__button button-reset" disabled></button>
+            <button id="equal" class="calculator__button button-reset">=</button>
+          </div>
+        </div>
+        <ul class="logs">
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
