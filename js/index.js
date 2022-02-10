@@ -48,6 +48,14 @@ $(function () {
 
       if ($(this).attr('id') === 'reset') {
         setValue('0');
+      } else if ($(this).attr('id') === 'clear') {
+        const withoutLastChar = getValue().slice(0, -1);
+
+        if (!withoutLastChar) {
+          setValue('0');
+        } else {
+          setValue(withoutLastChar);
+        }
       } else if ($(this).attr('id') === 'equal') {
         const result = evil(getValue());
 
@@ -61,9 +69,7 @@ $(function () {
           setValue(result);
         }
       } else {
-        if (getValue() === '0') {
-          setValue($(this).text());
-        } else if (isOperator($(this).text())) {
+        if (isOperator($(this).text())) {
           const LAST = -1;
           const lastChar = getValue().slice(LAST);
           let value = getValue() + $(this).text();
@@ -73,6 +79,8 @@ $(function () {
           }
 
           setValue(value);
+        } else if (getValue() === '0') {
+          setValue($(this).text());
         } else {
           setValue(getValue() + $(this).text());
         }
